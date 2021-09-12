@@ -1,2 +1,4 @@
 <p>List of Reservations</p>
-<app-graph-component></app-graph-component>
+<div *ngFor="let riItem of graphData?.totalComputeUsage; index as i; first as isFirst">
+    <app-ri-item></app-ri-item>
+</div>

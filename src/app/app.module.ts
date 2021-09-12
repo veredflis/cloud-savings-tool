@@ -7,12 +7,14 @@ import { DataConvertorService } from './Services/data-convertor.service';
 import { GraphComponentComponent } from './Components/graph-component/graph-component.component';
 import { ChartsModule } from 'ng2-charts';
 import { RiViewComponent } from './Components/ri-view/ri-view.component';
+import { RiItemComponent } from './Components/ri-item/ri-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GraphComponentComponent,
-    RiViewComponent
+    RiViewComponent,
+    RiItemComponent
   ],
   imports: [
     BrowserModule,
