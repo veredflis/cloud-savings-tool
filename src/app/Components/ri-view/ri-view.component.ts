@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IComputeInput } from 'src/app/DTOs/icompute-input';
 
 @Component({
   selector: 'app-ri-view',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RiViewComponent implements OnInit {
 
-  constructor() { }
+  @Input() graphData: IComputeInput | null =null; 
+  constructor() {
+  }
 
   ngOnInit(): void {
+    console.log("graphData",this.graphData);
   }
 
 }

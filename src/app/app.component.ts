@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as data from '../assets/data/ri-data.json';
+import { IComputeInput } from './DTOs/icompute-input';
 import { DataConvertorService } from './Services/data-convertor.service';
 
 @Component({
@@ -9,11 +10,11 @@ import { DataConvertorService } from './Services/data-convertor.service';
 })
 export class AppComponent {
   title = 'ri-tool-ui';
-  convertedData:Array<any>=[];
+  convertedData: IComputeInput | null=null;
 
   constructor(private _dataConvertor:DataConvertorService){
-   let convertedData =  this._dataConvertor.convertInputObject(data);
-   console.log(convertedData);
+   this.convertedData =  this._dataConvertor.convertInputObject(data);
+   console.log("this.convertedData",this.convertedData);
   }
 
 
